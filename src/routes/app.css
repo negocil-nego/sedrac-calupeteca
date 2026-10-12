@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Opcional: faz o prefixo dark: respeitar o toggle manual e o sistema */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:not([data-theme="light"], [data-theme="light"] *)) {
+      @slot;
+    }
+  }
+}
+
+/* Liga as variáveis aos utilitários do Tailwind */
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-foreground: var(--text);
+  --color-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-on-accent: var(--on-accent);
+  --color-metal: var(--metal);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+}
+
+@layer base {
+  :root {
+    --bg: #F4F7F9;
+    --surface: #FFFFFF;
+    --surface-2: #E8EFF3;
+    --border: #D3DEE5;
+    --text: #0E1A24;
+    --text-muted: #4F6475;
+    --primary: #1F6A8F;
+    --primary-hover: #17546F;
+    --on-primary: #FFFFFF;
+    --accent: #C27A4E;
+    --accent-text: #A25A31;
+    --on-accent: #0E1A24;
+    --metal: #7C868F;
+    --success: #2E8B6E;
+    --warning: #B7791F;
+    --danger: #C0443A;
+  }
+
+  /* Segue o sistema, a menos que o utilizador force "light" */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0A1118;
+      --surface: #111C26;
+      --surface-2: #182733;
+      --border: #223647;
+      --text: #E8EEF2;
+      --text-muted: #8FA3B3;
+      --primary: #4A9CC4;
+      --primary-hover: #6BB2D6;
+      --on-primary: #0A1118;
+      --accent: #E0975F;
+      --accent-text: #E0975F;
+      --on-accent: #0A1118;
+      --metal: #9AA4AD;
+      --success: #4DB892;
+      --warning: #E5A93D;
+      --danger: #E8776C;
+    }
+  }
+
+  /* Toggle manual */
+  :root[data-theme="dark"] {
+    --bg: #0A1118;
+    --surface: #111C26;
+    --surface-2: #182733;
+    --border: #223647;
+    --text: #E8EEF2;
+    --text-muted: #8FA3B3;
+    --primary: #4A9CC4;
+    --primary-hover: #6BB2D6;
+    --on-primary: #0A1118;
+    --accent: #E0975F;
+    --accent-text: #E0975F;
+    --on-accent: #0A1118;
+    --metal: #9AA4AD;
+    --success: #4DB892;
+    --warning: #E5A93D;
+    --danger: #E8776C;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+/* Corrigido: usa a propriedade shorthand "background" */
+.bg-img {
+  background: url("/image.jpeg") no-repeat center / cover;
+}
