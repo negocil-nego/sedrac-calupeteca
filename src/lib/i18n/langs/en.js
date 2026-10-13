@@ -25,7 +25,7 @@ export default {
     "skills.project.description": "Some of the projects I took part in, from development to delivery.",
 
     "person.about.title": "About me",
-    "person.about.p1": "I am a software developer with over 6 years of experience in the field, having led and collaborated on several projects.",
+    "person.about.p1": "I am a software developer with over {{years}} years of experience in the field, having led and collaborated on several projects.",
     "person.about.p2": "Throughout my career I have worked mostly as a fullstack developer, with a stronger focus on backend. I have also taken on other roles such as DevOps, database administrator, architect and software engineer.",
     "person.about.p3": "In my free time I enjoy watching anime, taking part in debates on a wide range of topics such as politics and society, and listening to music — mostly Rock, Indie Rock, Electronic and Afro Dance.",
 

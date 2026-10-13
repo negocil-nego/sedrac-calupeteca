@@ -25,7 +25,7 @@ export default {
     "skills.project.description": "Alguns dos projectos em que participei, do desenvolvimento à entrega.",
 
     "person.about.title": "Sobre mim",
-    "person.about.p1": "Sou desenvolvedor de software com mais de 6 anos de experiência na área, tendo liderado e colaborado em diversos projectos.",
+    "person.about.p1": "Sou desenvolvedor de software com mais de {{years}} anos de experiência na área, tendo liderado e colaborado em diversos projectos.",
     "person.about.p2": "Ao longo da carreira trabalhei sobretudo como desenvolvedor fullstack, com maior foco em backend. Também já desempenhei outras funções, como DevOps, administrador de bases de dados, arquitecto e engenheiro de software.",
     "person.about.p3": "Nos tempos livres, gosto de assistir a animes, participar em debates sobre temas variados, como política e sociedade, e ouvir música, sobretudo Rock, Indie Rock, Electrónica e Afro Dance.",
 

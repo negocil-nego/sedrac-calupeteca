@@ -1,6 +1,8 @@
 <script lang="ts">
     import { t } from "../../../i18n";
     import Drawer from "../Drawer.svelte";
+
+    const yearsOfExperience = new Date().getFullYear() - 2020;
 </script>
 
 <Drawer
@@ -10,7 +12,7 @@
 >
     <div class="space-y-3 md:space-y-5 lg:space-y-8">
         <p class="leading-relaxed">
-            {$t("person.about.p1")}
+            {$t("person.about.p1", { years: yearsOfExperience })}
         </p>
 
         <p class="leading-relaxed">
