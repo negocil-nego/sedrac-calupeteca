@@ -23,7 +23,7 @@
 
     <!-- Menu Dropdown -->
     {#if isOpen}
-        <div class="absolute right-0 mt-2 w-36 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 z-50">
+        <div class="absolute right-0 mt-2 w-36 bg-white dark:bg-background border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 z-50">
             {#each locales as lang}
                 <button
                     onclick={() => selectLanguage(lang)}

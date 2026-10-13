@@ -1,6 +1,6 @@
 <script lang="ts">
     import { t } from "../../i18n";
-    import { skillItems } from "../data/data.svelte";
+    import { skillItems } from "../data/section.svelte";
 
     const items = skillItems;
 </script>

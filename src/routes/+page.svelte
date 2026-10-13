@@ -1,5 +1,7 @@
 <script lang="ts">
+    import GridPerson from "#lib/components/ui/GridPerson.svelte";
     import GridSection from "#lib/components/ui/GridSection.svelte";
+    import GridSocialsNetwork from "#lib/components/ui/GridSocialsNetwork.svelte";
     import LanguageSwitcher from "#lib/components/ui/LanguageSwitcher.svelte";
     import ThemeSwitcher from "#lib/components/ui/ThemeSwitcher.svelte";
     import { t } from "../lib/i18n";
@@ -8,7 +10,6 @@
 <svelte:head>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&display=swap");
-
         .clarity-city {
             font-family: "Clarity City", sans-serif;
             font-optical-sizing: auto;
@@ -30,7 +31,15 @@
             </hgroup>
 
             <div class="md:w-125 xl:w-150 text-lg">
-                {$t("homepage.ddevelop.desc")}
+                {$t("homepage.develop.desc")}
+            </div>
+
+            <div>
+                <GridPerson />
+            </div>
+
+            <div class="md:mt-5 lg:mt-10">
+                <GridSocialsNetwork />
             </div>
         </div>
 
@@ -53,13 +62,12 @@
                 </div>
             </div>
         </div>
-
-        <div
-            class="pointer-events-none absolute inset-x-0 bottom-6 z-10 flex justify-center px-4 md:bottom-10 md:px-10"
-        >
-            <div class="pointer-events-auto w-full">
-                <GridSection />
-            </div>
-        </div>
     </header>
+    <section
+        class="pointer-events-none md:absolute inset-x-0 bottom-6 z-10 flex justify-center px-4 md:bottom-10 md:px-10 pb-5"
+    >
+        <div class="pointer-events-auto w-full">
+            <GridSection />
+        </div>
+    </section>
 </main>

@@ -1,3 +1,8 @@
+export interface TopicItem {
+    id: string;
+    icon: string;
+    title: string;
+}
 export interface SkillItem {
     id: string;
     image: string;

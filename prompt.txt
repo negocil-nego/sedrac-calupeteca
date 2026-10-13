@@ -1,0 +1,69 @@
+    {
+        id: "about-me",
+        icon: "hgi hgi-stroke hgi-rounded hgi-user-03",
+        title: "Sobre me"
+        // para abrir o AboutMeDialog
+    },
+    {
+        id: "course",
+        icon: "hgi hgi-stroke hgi-rounded hgi-graduation-cap",
+        title: "Formação acadêmica"
+        // para abrir o CourseDialog
+    },
+    {
+        id: "works",
+        icon: "hgi hgi-stroke hgi-rounded hgi-computer-desk-02",
+        title: "Experiências de trabalho"
+        // para abrir o WorksDialog
+    },    
+    {
+        id: "project",
+        icon: "hgi hgi-stroke hgi-rounded hgi-hierarchy-files",
+        title: "Projectos"
+        // para abrir o ProjectDialog
+    },  
+
+
+AboutMeDialog
+Texto:
+Sou desenvolvedor de software, trabalho como programador fullstack (mas com mais desenvolvimento no backend), também sou fundador do projecto 
+"negodesign" um framework frontend para svele, react, flutter estando em face de construção.
+
+CourseDialog // criar um listItem para apresentar as informações com o texto descritivo
+Texto:
+Ensino Superior em Ciências da Computação
+Instituto Politécnico da Universidade Katyavala Bwila (IP-UKB), Benguela
+2017 — 2022
+Ensino Secundário em Ciências Físicas e Biológicas
+Escola Católica São José, Luanda
+Fevereiro 2014 — 2016
+Curso de Conceitos Básicos de Redes de Computadores
+Centro Integrado de Formação Tecnológica (CINFOTEC)
+Curso de Informática na Óptica do Utilizador
+Centro Integrado de Formação Tecnológica (CINFOTEC)
+
+WorksDialog // criar um listItem para apresentar as informações com o texto descritivo
+Texto:
+Desenvolvimento web:
+● Spring Boot, Laravel, Django, Vue, Nuxt Js, ASP.NET Core (C#), Svelte, Tanstack Start
+Desenvolvimento mobile:
+● Java, Kotlin, Flutter, React Native (noções básicas)
+
+Desenvolvimento desktop:
+● JavaFX, Electron
+DevOps:
+● AWS: S3, EC2, CloudFront, SQS
+● GCP: Cloud Run, Cloud SQL, API Gateway, Storage
+● Domínio dos principais programas do pacote Office
+● Domínio dos principais conceitos de administração e redes de computadores
+
+ProjectDialog // criar um listItem para apresentar as informações com o texto descritivo
+GQS, Luanda — Desenvolvedor de software
+AGOSTO DE MÊS DE 2021 ATÉ MAIO 2024
+Trabalhei como programador full stack na GQS (Grupo Queiroz Saldanha) para
+manutenção da plataforma forlearn.
+Reitoria da Universidade Katyavala Bwila, Benguela— Estagiário
+(Departamento de TI)
+JUNHO DE 2020 ATÉ NOVEMBRO DE 2020
+Trabalhei como estagiário na UKB reitoria, com programação e manutenção de
+computadores, apoio ao pessoal (ajudando no uso do pacote office)

@@ -1,6 +1,6 @@
 export default {
     "homepage.develop": "Software Developer",
-    "homepage.ddevelop.desc": "Software developer focused on analysis, systems design and DevOps",
+    "homepage.develop.desc": "Software developer focused on analysis, systems design and DevOps",
 
     "skills.language.title": "Languages",
     "skills.language.description": "Efficient solutions built with modern languages and best practices.",
