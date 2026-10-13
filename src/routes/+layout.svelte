@@ -7,6 +7,7 @@
 </script>
 
 <svelte:head>
+	<link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
 	<link rel="icon" href={favicon} />
 </svelte:head>
 

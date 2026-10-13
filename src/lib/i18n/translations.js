@@ -1,8 +1,7 @@
+import en from "./langs/en";
+import pt from "./langs/pt";
+
 export default {
-  en: {
-    "homepage.develop": "Software Developer"
-  },
-  pt: {
-    "homepage.develop": "Desenvolvedor de software"
-  },
+    en,
+    pt
 };

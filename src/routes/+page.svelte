@@ -1,40 +1,36 @@
 <script lang="ts">
-    import ThemeSwitcher from "#lib/components/ThemeSwitcher.svelte";
+    import GridSection from "#lib/components/ui/GridSection.svelte";
+    import LanguageSwitcher from "#lib/components/ui/LanguageSwitcher.svelte";
+    import ThemeSwitcher from "#lib/components/ui/ThemeSwitcher.svelte";
     import { t } from "../lib/i18n";
 </script>
+
 <svelte:head>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&display=swap");
 
         .clarity-city {
             font-family: "Clarity City", sans-serif;
             font-optical-sizing: auto;
-            font-weight: <weight>;
             font-style: normal;
         }
     </style>
 </svelte:head>
 <main class="min-h-screen bg-background text-foreground">
-    <header class="grid min-h-screen grid-cols-1 md:grid-cols-2">
-        <div
-            class="order-2 flex flex-col justify-center gap-6 px-8 py-12 md:order-1 md:px-16"
-        >
+    <header class="grid min-h-screen grid-cols-1 md:grid-cols-2 relative">
+        <div class="order-2 flex flex-col gap-6 px-8 py-12 md:order-1 md:px-16">
             <hgroup>
-                <h1 class="text-5xl font-bold tracking-tight md:text-7xl clarity-city">
+                <h1
+                    class="text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl clarity-city"
+                >
                     <span>Sedrac</span>
                     <span>Lucas</span>
                     <span>Calupeteca</span>
                 </h1>
             </hgroup>
 
-            <div
-                class="w-fit rounded-full bg-accent px-4 py-1 text-sm font-medium text-on-accent"
-            >
-                {$t("homepage.develop")}
-            </div>
-
-            <div class="md:w-125 text-lg md:text-xl">
-                Sou um professional na area de desenvolvimento de software, analase de desenho, e se professionalizando na em devops
+            <div class="md:w-125 xl:w-150 text-lg">
+                {$t("homepage.ddevelop.desc")}
             </div>
         </div>
 
@@ -50,8 +46,19 @@
                 class="absolute inset-0 bg-linear-to-t from-background to-transparent md:hidden"
             ></div>
 
-            <div class="absolute">
-                <ThemeSwitcher/>
+            <div class="absolute top-5 right-5">
+                <div class="flex items-center justify-center gap-5">
+                    <LanguageSwitcher />
+                    <ThemeSwitcher />
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="pointer-events-none absolute inset-x-0 bottom-6 z-10 flex justify-center px-4 md:bottom-10 md:px-10"
+        >
+            <div class="pointer-events-auto w-full">
+                <GridSection />
             </div>
         </div>
     </header>

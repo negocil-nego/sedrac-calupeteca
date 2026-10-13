@@ -11,7 +11,7 @@ function translate(locale: any, key: any, vars: any) {
   if (!locale) throw new Error(`no translation for key "${key}"`);
 
   // Grab the translation from the translations object.
-  let text = translations[locale][key];
+  let text = (translations as Record<string, Record<string, string>>)[locale][key];
 
   if (!text) throw new Error(`no translation found for ${locale}.${key}`);
 
