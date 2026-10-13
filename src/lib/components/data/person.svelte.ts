@@ -4,25 +4,21 @@ export const topicsItems: TopicItem[] = [
     {
         id: "about-me",
         icon: "hgi hgi-stroke hgi-rounded hgi-user-03",
-        title: "Sobre mim"
-        // para abrir o AboutMeDialog
+        title: "person.about.title"
     },
     {
         id: "course",
         icon: "hgi hgi-stroke hgi-rounded hgi-graduation-cap",
-        title: "Formação acadêmica"
-        // para abrir o CourseDialog
+        title: "person.course.title"
     },
     {
         id: "works",
         icon: "hgi hgi-stroke hgi-rounded hgi-computer-desk-02",
-        title: "Experiências de trabalho"
-        // para abrir o WorksDialog
+        title: "person.works.title"
     },    
     {
         id: "project",
         icon: "hgi hgi-stroke hgi-rounded hgi-hierarchy-files",
-        title: "Projectos"
-        // para abrir o ProjectDialog
+        title: "person.project.title"
     },      
 ];

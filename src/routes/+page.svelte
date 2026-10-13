@@ -22,7 +22,7 @@
         <div class="order-2 flex flex-col gap-6 px-8 py-12 md:order-1 md:px-16">
             <hgroup>
                 <h1
-                    class="text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl clarity-city"
+                    class="text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl clarity-city  animate__animated animate__slideInDown animate__delay-2s"
                 >
                     <span>Sedrac</span>
                     <span>Lucas</span>
@@ -30,7 +30,7 @@
                 </h1>
             </hgroup>
 
-            <div class="md:w-125 xl:w-150 text-lg">
+            <div class="md:w-125 xl:w-150 text-lg animate__animated animate__slideInDown">
                 {$t("homepage.develop.desc")}
             </div>
 
@@ -46,7 +46,7 @@
         <div
             class="relative order-1 min-h-[50vh] bg-[url('/image.jpeg')] bg-cover bg-top bg-no-repeat md:order-2 md:min-h-full"
             role="img"
-            aria-label="Retrato"
+            aria-label={$t("homepage.portrait")}
         >
             <div
                 class="absolute inset-0 hidden bg-linear-to-r from-background to-transparent md:block"

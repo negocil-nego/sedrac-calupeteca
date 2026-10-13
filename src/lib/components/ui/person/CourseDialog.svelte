@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { t } from "../../../i18n";
     import Drawer from "../Drawer.svelte";
     import ListItem from "../ListItem.svelte";
 </script>
@@ -6,30 +7,30 @@
 <Drawer
     id="course-dialog"
     icon="hgi hgi-stroke hgi-rounded hgi-graduation-cap"
-    title="Formação acadêmica"
+    title={$t("person.course.title")}
 >
     <ul class="space-y-5 md:space-y-7">
         <ListItem
-            title="Ensino Superior em Ciências da Computação"
+            title={$t("person.course.item1.title")}
             subtitle="Instituto Politécnico da Universidade Katyavala Bwila (IP-UKB)"
-            period="2017 à 2022"
-            type="Licenciatura"
+            period={$t("person.course.item1.period")}
+            type={$t("person.course.item1.type")}
         />
         <ListItem
-            title="Ensino Secundário em Ciências Físicas e Biológicas"
+            title={$t("person.course.item2.title")}
             subtitle="Escola Católica São José, Luanda"
-            period="2014 à 2016"
-            type="Ensino Médio"
+            period={$t("person.course.item2.period")}
+            type={$t("person.course.item2.type")}
         />
         <ListItem
-            title="Curso de Conceitos Básicos de Redes de Computadores"
+            title={$t("person.course.item3.title")}
             subtitle="Centro Integrado de Formação Tecnológica (CINFOTEC)"
-            type="Curso técnico"
+            type={$t("person.course.item3.type")}
         />
         <ListItem
-            title="Curso de Informática na Óptica do Utilizador"
+            title={$t("person.course.item4.title")}
             subtitle="Centro Integrado de Formação Tecnológica (CINFOTEC)"
-            type="Curso técnico"
+            type={$t("person.course.item4.type")}
         />
     </ul>
 </Drawer>

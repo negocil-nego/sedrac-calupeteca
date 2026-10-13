@@ -9,10 +9,10 @@
 </script>
 
 <ul class="flex gap-4">
-    {#each items as { link, image, label }}
-        <li class="bg-white rounded-full p-1">
+    {#each items as { link, image, label }, i}
+        <li class="bg-white rounded-full p-1 animate__animated animate__fadeInLeft animate__delay-{items.length - i}s">
             <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label}>
-                <img src={image} alt={label} width="45" height="45" />
+                <img src={image} alt={label} width="40" height="40" />
             </a>
         </li>
     {/each}

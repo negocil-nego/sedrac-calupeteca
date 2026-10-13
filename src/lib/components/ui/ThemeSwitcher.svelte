@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { t } from "../../i18n";
+
     let theme = $state<"light" | "dark">("light");
 
     function toggleTheme() {
@@ -7,7 +9,7 @@
     }
 </script>
 
-<button type="button" onclick={toggleTheme} aria-label="Alternar tema" class="text-2xl mt-1.5">
+<button type="button" onclick={toggleTheme} aria-label={$t("common.toggleTheme")} class="text-2xl mt-1.5">
     {#if theme === "light"}
         <i class="hgi hgi-stroke hgi-rounded hgi-sun-02"></i>
     {:else}

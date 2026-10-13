@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
+    import { t } from "../../i18n";
 
     interface Props {
         id: string;
@@ -30,7 +31,7 @@
                 type="button"
                 command="close"
                 commandfor={id}
-                aria-label="Fechar"
+                aria-label={$t("common.close")}
                 class="shrink-0 rounded-full p-2 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
             >
                 <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01 text-xl"></i>
