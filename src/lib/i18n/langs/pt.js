@@ -1,4 +1,7 @@
 export default {
+    "lang.pt": "Portugês",
+    "lang.en": "Inglês",
+
     "common.close": "Fechar",
     "common.selectLanguage": "Selecionar idioma",
     "common.toggleTheme": "Alternar tema",

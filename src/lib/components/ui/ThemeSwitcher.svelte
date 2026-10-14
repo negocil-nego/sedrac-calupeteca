@@ -7,6 +7,13 @@
         theme = theme === "light" ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
     }
+
+    $effect(() => {
+        const themeData = document.documentElement.getAttribute("data-theme");
+        if (themeData) {
+            theme = themeData === "light" ? "dark" : "light";
+        }
+    })
 </script>
 
 <button type="button" onclick={toggleTheme} aria-label={$t("common.toggleTheme")} class="text-2xl mt-1.5">

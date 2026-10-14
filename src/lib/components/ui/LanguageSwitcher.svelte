@@ -3,6 +3,8 @@
 
     let isOpen = $state(false);
 
+    const flagsLang: Record<string, string> = { pt: "lang.pt", en: "lang.en" };
+
     // código do país usado pelo flagcdn.com
     const flags: Record<string, string> = { pt: "br", en: "us" };
 
@@ -56,7 +58,7 @@
                         {:else}
                             <span>🌐</span>
                         {/if}
-                        <span class="uppercase">{lang}</span>
+                        <span>{$t(flagsLang[lang]) ?? lang}</span>
                     </span>
                     {#if $locale === lang}<span>✓</span>{/if}
                 </button>
