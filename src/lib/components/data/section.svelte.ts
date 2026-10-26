@@ -16,9 +16,11 @@ import {
     springBoot,
     sqlite,
     typescript,
+    dart,
+    flutter,
 } from "./skills";
 
-const languageItems: SkillItem[] = [java, typescript, php, python];
+const languageItems: SkillItem[] = [java, typescript, php, python, dart];
 
 export const frameworkItems: SkillItem[] = [
     springBoot,
@@ -27,6 +29,7 @@ export const frameworkItems: SkillItem[] = [
     svelte,
     nuxt,
     next,
+    flutter
 ];
 
 const databaseItems: SkillItem[] = [postgresql, mysql, sqlite];

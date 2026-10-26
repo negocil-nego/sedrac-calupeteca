@@ -55,6 +55,7 @@ export default {
     "person.works.item4.period": "June — November 2020",
 
     "person.project.title": "Projects",
+    "person.awards.title": "Awards",
     "person.project.item1.title": "Hinário IECA Mobile App",
     "person.project.item1.description": "Mobile app that gathers a digital collection of hymns and songs from evangelical churches, allowing users to look up their hymns in a simple and fast way.",
     "person.project.item2.title": "Tudkabir Mobile App",

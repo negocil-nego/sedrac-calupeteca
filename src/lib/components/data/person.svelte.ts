@@ -20,5 +20,10 @@ export const topicsItems: TopicItem[] = [
         id: "project",
         icon: "hgi hgi-stroke hgi-rounded hgi-hierarchy-files",
         title: "person.project.title"
-    },      
+    },
+    {
+        id: "awards",
+        icon: "hgi hgi-stroke hgi-rounded hgi-award-01",
+        title: "person.awards.title"
+    },
 ];

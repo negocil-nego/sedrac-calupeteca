@@ -55,6 +55,7 @@ export default {
     "person.works.item4.period": "Junho — Novembro 2020",
 
     "person.project.title": "Projectos",
+    "person.awards.title": "Prémios",
     "person.project.item1.title": "Aplicação mobile Hinário IECA",
     "person.project.item1.description": "Aplicação mobile que reúne numa coletânea digital hinos e canções de igrejas evangélicas, permitindo aos utilizadores consultar os seus hinos de forma simples e rápida.",
     "person.project.item2.title": "Aplicação mobile Tudkabir",

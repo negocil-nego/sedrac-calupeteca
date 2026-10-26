@@ -155,3 +155,35 @@ dialog.drawer::backdrop {
     background: rgb(0 0 0 / 0);
   }
 }
+
+/* Modal central para a galeria de prémios */
+dialog.awards-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  width: min(92vw, 76rem);
+  height: min(88dvh, 54rem);
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 1rem;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 0.45);
+  transform: translate(-50%, -50%);
+}
+
+dialog.awards-dialog::backdrop {
+  background: rgb(0 0 0 / 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.skill-popover {
+  position: fixed;
+  inset: auto;
+  margin: 0.5rem 0;
+  position-area: block-end;
+  position-try-fallbacks: flip-block, flip-inline;
+}
