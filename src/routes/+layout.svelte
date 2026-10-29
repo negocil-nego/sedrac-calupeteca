@@ -1,9 +1,29 @@
 <script lang="ts">
 	import type { LayoutProps } from "./$types";
 	import "./app.css";
-	import { t } from "../lib/i18n";
+	import { onMount } from "svelte";
+	import { detectLocale, locale, localeStorageKey, locales, t } from "../lib/i18n";
 
 	let { children }: LayoutProps = $props();
+
+	onMount(() => {
+		let savedLocale: string | null = null;
+		try {
+			savedLocale = localStorage.getItem(localeStorageKey);
+		} catch {
+			// Storage can be disabled; use the browser language instead.
+		}
+
+		const browserLanguages = navigator.languages?.length
+			? navigator.languages
+			: [navigator.language];
+		locale.set(savedLocale && locales.includes(savedLocale) ? savedLocale : detectLocale(browserLanguages));
+	});
+
+	$effect(() => {
+		document.documentElement.lang = $locale;
+	});
+
 	const siteUrl = import.meta.env.VITE_SITE_URL?.replace(/\/$/, "");
 	const personSchema = $derived({
 		"@context": "https://schema.org",

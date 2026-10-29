@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { locale, locales, t } from "../../i18n";
+    import { locale, localeStorageKey, locales, t } from "../../i18n";
 
     let isOpen = $state(false);
 
@@ -15,6 +15,11 @@
 
     function selectLanguage(lang: string) {
         locale.set(lang);
+        try {
+            localStorage.setItem(localeStorageKey, lang);
+        } catch {
+            // Keep the selected language for this session when storage is unavailable.
+        }
         isOpen = false;
     }
 </script>

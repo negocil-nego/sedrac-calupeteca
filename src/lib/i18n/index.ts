@@ -2,7 +2,17 @@ import { derived, writable } from "svelte/store";
 import translations from "./translations";
 
 export const locale: any = writable("pt");
-export const locales: any = Object.keys(translations);
+export const locales = Object.keys(translations);
+export const localeStorageKey = "sedrac-locale";
+
+export function detectLocale(preferredLanguages: readonly string[]): string {
+  for (const preferredLanguage of preferredLanguages) {
+    const language = preferredLanguage.toLowerCase().replaceAll("_", "-").split("-")[0];
+    if (locales.includes(language)) return language;
+  }
+
+  return "pt";
+}
 
 function translate(locale: any, key: any, vars: any) {
   // Let's throw some errors if we're trying to use keys/locales that don't exist.
