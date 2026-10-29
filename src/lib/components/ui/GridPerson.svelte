@@ -9,36 +9,38 @@
 
   const items = topicsItems;
   const awardImages = [
-    "/aocpc/aocpc-01.jpeg",
-    "/aocpc/aocpc-02.jpeg",
-    "/aocpc/aocpc-03.jpeg",
-    "/aocpc/aocpc-04.jpeg",
-    "/aocpc/aocpc-05.jpeg",
-    "/aocpc/img1.jpeg",
-    "/aocpc/img2.jpeg",
-    "/aocpc/img3.jpeg",
+    { src: "/aocpc/aocpc-01.jpeg", altKey: "person.awards.photo.aocpc01" },
+    { src: "/aocpc/aocpc-02.jpeg", altKey: "person.awards.photo.aocpc02" },
+    { src: "/aocpc/aocpc-03.jpeg", altKey: "person.awards.photo.aocpc03" },
+    { src: "/aocpc/aocpc-04.jpeg", altKey: "person.awards.photo.aocpc04" },
+    { src: "/aocpc/aocpc-05.jpeg", altKey: "person.awards.photo.aocpc05" },
+    { src: "/aocpc/img1.jpeg", altKey: "person.awards.photo.ipukb01" },
+    { src: "/aocpc/img2.jpeg", altKey: "person.awards.photo.ipukb02" },
+    { src: "/aocpc/img3.jpeg", altKey: "person.awards.photo.aocpc06" },
   ];
 </script>
 
-<section
+<nav aria-label={$t("person.navigation")}>
+<ul
   class="grid grid-cols-2 gap-6 md:gap-10 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 w-full items-start justify-items-start"
 >
   {#each items as it, i (it.id)}
-    <button
-      class="w-31.25 h-30 bg-white/10 rounded-2xl space-y-1 cursor-pointer p-2 animate__animated animate__backInLeft animate__delay-{items.length -
-        i}s"
-      command="show-modal"
-      commandfor="{it.id}-dialog"
-    >
-      <div class="flex flex-col items-start justify-start">
-        <div>
-          <i class="{it.icon} text-2xl lg:text-4xl"></i>
-        </div>
-        <div class="text-left">{$t(it.title)}</div>
-      </div>
-    </button>
+    <li>
+      <button
+        class="w-31.25 h-30 bg-white/10 rounded-2xl space-y-1 cursor-pointer p-2 animate__animated animate__backInLeft animate__delay-{items.length -
+          i}s"
+        command="show-modal"
+        commandfor="{it.id}-dialog"
+      >
+        <span class="flex flex-col items-start justify-start">
+          <i aria-hidden="true" class="{it.icon} text-2xl lg:text-4xl"></i>
+          <span class="text-left">{$t(it.title)}</span>
+        </span>
+      </button>
+    </li>
   {/each}
-</section>
+</ul>
+</nav>
 
 <AboutMeDialog />
 <CourseDialog />

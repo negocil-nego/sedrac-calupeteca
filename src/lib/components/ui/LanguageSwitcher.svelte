@@ -3,10 +3,12 @@
 
     let isOpen = $state(false);
 
-    const flagsLang: Record<string, string> = { pt: "lang.pt", en: "lang.en" };
+    const flagsLang: Record<string, string> = {
+        pt: "lang.pt", en: "lang.en", fr: "lang.fr", ru: "lang.ru"
+    };
 
     // código do país usado pelo flagcdn.com
-    const flags: Record<string, string> = { pt: "br", en: "us" };
+    const flags: Record<string, string> = { pt: "br", en: "us", fr: "fr", ru: "ru" };
 
     const flagUrl = (lang: string) =>
         flags[lang] ? `https://flagcdn.com/w40/${flags[lang]}.png` : null;
@@ -28,7 +30,7 @@
         {#if flagUrl($locale)}
             <img
                 src={flagUrl($locale)}
-                alt={$locale}
+                alt=""
                 width="28"
                 height="20"
                 class="rounded-sm object-cover"

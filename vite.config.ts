@@ -1,5 +1,5 @@
 //import adapter from '@sveltejs/adapter-bun';
-import adapter from '@sveltejs/adapter-static';
+import adapter from 'amplify-adapter';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';

@@ -18,8 +18,8 @@
 
 <button type="button" onclick={toggleTheme} aria-label={$t("common.toggleTheme")} class="text-2xl mt-1.5">
     {#if theme === "light"}
-        <i class="hgi hgi-stroke hgi-rounded hgi-sun-02"></i>
+        <i aria-hidden="true" class="hgi hgi-stroke hgi-rounded hgi-sun-02"></i>
     {:else}
-        <i class="hgi hgi-stroke hgi-rounded hgi-moon-02"></i>
+        <i aria-hidden="true" class="hgi hgi-stroke hgi-rounded hgi-moon-02"></i>
     {/if}
 </button>

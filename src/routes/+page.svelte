@@ -28,13 +28,10 @@
           <span>Lucas</span>
           <span>Calupeteca</span>
         </h1>
+        <p class="md:w-125 xl:w-150 text-lg animate__animated animate__slideInDown">
+          {$t("homepage.develop.desc")}
+        </p>
       </hgroup>
-
-      <div
-        class="md:w-125 xl:w-150 text-lg animate__animated animate__slideInDown"
-      >
-        {$t("homepage.develop.desc")}
-      </div>
 
       <div>
         <GridPerson />
@@ -45,25 +42,31 @@
       </div>
     </div>
 
-    <div
-      class="relative order-1 min-h-[50vh] bg-[url('/image.jpeg')] bg-cover bg-top bg-no-repeat md:order-2 md:min-h-full"
-      role="img"
-      aria-label={$t("homepage.portrait")}
+    <figure
+      class="relative order-1 min-h-[50vh] overflow-hidden bg-background bg-cover bg-top bg-no-repeat md:order-2 md:min-h-full"
     >
+      <img
+        src="/image.jpeg"
+        alt={$t("homepage.portrait.alt")}
+        fetchpriority="high"
+        class="absolute inset-0 size-full object-cover object-top"
+      />
       <div
+        aria-hidden="true"
         class="absolute inset-0 hidden bg-linear-to-r from-background to-transparent md:block"
       ></div>
       <div
+        aria-hidden="true"
         class="absolute inset-0 bg-linear-to-t from-background to-transparent md:hidden"
       ></div>
 
-      <div class="absolute top-5 right-5">
-        <div class="flex items-center justify-center gap-5">
-          <LanguageSwitcher />
-          <ThemeSwitcher />
-        </div>
-      </div>
-    </div>
+    </figure>
+    <nav aria-label={$t("homepage.displayControls")} class="absolute top-5 right-5 z-20">
+      <ul class="flex items-center justify-center gap-5">
+        <li><LanguageSwitcher /></li>
+        <li><ThemeSwitcher /></li>
+      </ul>
+    </nav>
   </header>
   <section
     class="pointer-events-none lg:absolute inset-x-0 bottom-6 z-10 flex justify-center px-4 md:bottom-10 md:px-10 pb-5"

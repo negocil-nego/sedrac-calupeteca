@@ -23,7 +23,7 @@
     <div class="flex h-full flex-col p-6">
         <header class="flex items-start justify-between gap-4">
             <div class="flex items-center gap-3">
-                <i class="{icon} text-2xl text-accent"></i>
+                <i aria-hidden="true" class="{icon} text-2xl text-accent"></i>
                 <h2 id="{id}-title" class="text-xl font-semibold">{title}</h2>
             </div>
 
@@ -34,7 +34,7 @@
                 aria-label={$t("common.close")}
                 class="shrink-0 rounded-full p-2 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
             >
-                <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01 text-xl"></i>
+                <i aria-hidden="true" class="hgi hgi-stroke hgi-rounded hgi-cancel-01 text-xl"></i>
             </button>
         </header>
 
