@@ -97,7 +97,7 @@
 		content={siteUrl ? `${siteUrl}/image.jpeg` : "/image.jpeg"}
 	/>
 	<script type="application/ld+json">
-{JSON.stringify(personSchema)}
+		{@html JSON.stringify(personSchema).replace(/</g, "\\u003c")}
 	</script>
 </svelte:head>
 
