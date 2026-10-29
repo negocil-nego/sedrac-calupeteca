@@ -22,7 +22,7 @@
 
 <nav aria-label={$t("person.navigation")}>
 <ul
-  class="grid grid-cols-2 gap-6 md:gap-10 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 w-full items-start justify-items-start"
+  class="grid grid-cols-2 gap-6 md:gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full items-start justify-items-start"
 >
   {#each items as it, i (it.id)}
     <li>
