@@ -1,3 +1,26 @@
-# allow crawling everything by default
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: *
-Disallow:
+Allow: /
