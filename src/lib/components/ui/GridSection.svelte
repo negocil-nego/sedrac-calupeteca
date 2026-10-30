@@ -23,8 +23,8 @@
             <p class="text-xs">{$t(it.description)}</p>
           </header>
           <ul
-            class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-{it.items
-              .length} gap-2 md:gap-3 xl:gap-5"
+            class="grid grid-cols-3 md:grid-cols-5 2xl:grid-cols-7 3xl:grid-cols-{it
+              .items.length} gap-2 md:gap-3 xl:gap-5"
           >
             {#each it.items as d, idx (d.id)}
               <li
