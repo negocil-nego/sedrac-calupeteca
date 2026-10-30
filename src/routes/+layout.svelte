@@ -2,6 +2,7 @@
   import type { LayoutProps } from "./$types";
   import "./app.css";
   import { onMount } from "svelte";
+  import LDTag from "../lib/components/ui/seo/LDTag.svelte";
   import {
     detectLocale,
     locale,
@@ -109,9 +110,8 @@
     name="twitter:image"
     content={siteUrl ? `${siteUrl}/image.jpeg` : "/image.jpeg"}
   />
-  <script type="application/ld+json">
-        {@html JSON.stringify(personSchema).replace(/</g, "\\u003c")}
-  </script>
 </svelte:head>
+
+<LDTag schema={personSchema} />
 
 {@render children()}
