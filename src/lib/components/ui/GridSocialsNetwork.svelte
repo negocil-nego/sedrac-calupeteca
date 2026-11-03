@@ -1,5 +1,9 @@
 <script lang="ts">
     import { t } from "../../i18n";
+    let {
+        active = false,
+        onComplete = () => {},
+    }: { active?: boolean; onComplete?: () => void } = $props();
 
     const items = [
         { link: "https://www.linkedin.com/in/sedrac-calupeteca/", image: "https://img.icons8.com/?size=100&id=qNUNvR9aEWql&format=png&color=000000", label: "LinkedIn" },
@@ -13,7 +17,11 @@
 <nav aria-label={$t("homepage.socialLinks")}>
 <ul class="flex gap-4">
     {#each items as { link, image, label }, i}
-        <li class="bg-white rounded-full p-1 animate__animated animate__fadeInLeft animate__delay-{items.length - i}s">
+        <li
+            style={active ? `--animate-duration: 1s; animation-delay: ${i}s` : undefined}
+            class="bg-white rounded-full p-1 {active ? 'animate__animated animate__fadeInLeft' : ''}"
+            onanimationend={active && i === items.length - 1 ? onComplete : undefined}
+        >
             <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label}>
                 <img src={image} alt={label} width="40" height="40" />
             </a>

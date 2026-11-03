@@ -15,6 +15,8 @@ import {
     svelte,
     springBoot,
     sqlite,
+    supabase,
+    firebase,
     typescript,
     dart,
     flutter,
@@ -32,7 +34,7 @@ export const frameworkItems: SkillItem[] = [
     flutter
 ];
 
-const databaseItems: SkillItem[] = [postgresql, mysql, sqlite];
+const databaseItems: SkillItem[] = [postgresql, mysql, sqlite, supabase, firebase];
 
 const devopsItems: SkillItem[] = [docker, gcp, aws];
 

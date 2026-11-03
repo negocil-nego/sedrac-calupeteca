@@ -105,6 +105,20 @@ export const sqlite: SkillItem = {
   description: "skills.item.sqlite.description",
 };
 
+export const supabase: SkillItem = {
+  id: "supabase",
+  image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/supabase.png",
+  title: "Supabase",
+  description: "skills.item.supabase.description",
+};
+
+export const firebase: SkillItem = {
+  id: "firebase",
+  image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/firebase.png",
+  title: "Firebase",
+  description: "skills.item.firebase.description",
+};
+
 export const docker: SkillItem = {
   id: "docker",
   image: "https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000",
