@@ -7,11 +7,6 @@
   import ProjectDialog from "./person/ProjectDialog.svelte";
   import AwardsDialog from "./person/AwardsDialog.svelte";
 
-  let {
-    active = false,
-    onComplete = () => {},
-  }: { active?: boolean; onComplete?: () => void } = $props();
-
   const items = topicsItems;
   const awardImages = [
     { src: "/aocpc/aocpc-01.jpeg", altKey: "person.awards.photo.aocpc01" },
@@ -32,9 +27,7 @@
   {#each items as it, i (it.id)}
     <li>
       <button
-        style={active ? `--animate-duration: 1s; animation-delay: ${i}s` : undefined}
-        class="w-31.25 h-30 bg-white/10 rounded-2xl space-y-1 cursor-pointer p-2 {active ? 'animate__animated animate__backInLeft' : ''}"
-        onanimationend={active && i === items.length - 1 ? onComplete : undefined}
+        class="w-31.25 h-30 bg-white/10 rounded-2xl space-y-1 cursor-pointer p-2"
         command="show-modal"
         commandfor="{it.id}-dialog"
       >

@@ -2,18 +2,7 @@
   import { t } from "../../i18n";
   import { skillItems } from "../data/section.svelte";
 
-  let {
-    active = false,
-    onComplete = () => {},
-  }: { active?: boolean; onComplete?: () => void } = $props();
-
   const items = skillItems;
-
-  // Each category and each skill icon gets the next one-second slot in DOM order.
-  const categoryAnimationIndex = (categoryIndex: number) =>
-    items
-      .slice(0, categoryIndex)
-      .reduce((count, category) => count + 1 + category.items.length, 0);
 </script>
 
 <section aria-labelledby="skills-heading" class="w-full">
@@ -22,8 +11,7 @@
     {#each items as it, i (it.id)}
       <section
         aria-labelledby="skill-category-{it.id}"
-        style={active ? `--animate-duration: 1s; animation-delay: ${categoryAnimationIndex(i)}s` : undefined}
-        class="flex gap-3 {active ? 'animate__animated animate__backInUp' : ''}"
+        class="flex gap-3"
       >
         <i aria-hidden="true" class="{it.icon} text-lg"></i>
         <div class="flex min-w-0 flex-col gap-3">
@@ -49,9 +37,7 @@
                   class="flex flex-col justify-center items-center gap-1 cursor-pointer"
                 >
                   <span
-                    style={active ? `--animate-duration: 1s; animation-delay: ${categoryAnimationIndex(i) + idx + 1}s` : undefined}
-                    class="bg-white/80 hover:bg-slate-600 backdrop-blur-2xl rounded-full p-2 {active ? 'animate__animated animate__fadeInLeft' : ''}"
-                    onanimationend={active && i === items.length - 1 && idx === it.items.length - 1 ? onComplete : undefined}
+                    class="bg-white/80 hover:bg-slate-600 backdrop-blur-2xl rounded-full p-2"
                   >
                     <img src={d.image} alt="" class="h-6 w-6 rounded-xl" />
                   </span>

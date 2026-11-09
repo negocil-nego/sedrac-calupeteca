@@ -5,12 +5,6 @@
   import LanguageSwitcher from "#lib/components/ui/LanguageSwitcher.svelte";
   import ThemeSwitcher from "#lib/components/ui/ThemeSwitcher.svelte";
   import { t } from "../lib/i18n";
-
-  let animationStep = $state(0);
-
-  const finishAnimationStep = (step: number) => {
-    if (animationStep === step) animationStep += 1;
-  };
 </script>
 
 <svelte:head>
@@ -28,8 +22,7 @@
     <div class="order-2 flex flex-col gap-6 px-8 py-12 md:order-1 md:px-16">
       <hgroup>
         <h1
-          class="text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl clarity-city animate__animated animate__slideInDown"
-          onanimationend={() => finishAnimationStep(0)}
+          class="text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl clarity-city"
         >
           <span>Sedrac</span>
           <span>Lucas</span>
@@ -38,24 +31,17 @@
       </hgroup>
 
       <div
-        class="md:w-125 xl:w-150 text-lg {animationStep < 1 ? 'invisible' : ''} {animationStep === 1 ? 'animate__animated animate__slideInDown' : ''}"
-        onanimationend={() => finishAnimationStep(1)}
+        class="md:w-125 xl:w-150 text-lg"
       >
         {$t("homepage.develop.desc")}
       </div>
 
-      <div class:invisible={animationStep < 2}>
-        <GridPerson
-          active={animationStep === 2}
-          onComplete={() => finishAnimationStep(2)}
-        />
+      <div>
+        <GridPerson />
       </div>
 
-      <div class="md:mt-5 lg:mt-10" class:invisible={animationStep < 3}>
-        <GridSocialsNetwork
-          active={animationStep === 3}
-          onComplete={() => finishAnimationStep(3)}
-        />
+      <div class="md:mt-5 lg:mt-10">
+        <GridSocialsNetwork />
       </div>
     </div>
 
@@ -82,11 +68,8 @@
   <section
     class="bg-transparent pointer-events-none 2xl:absolute inset-x-0 bottom-6 z-10 flex justify-center px-4 md:bottom-10 md:px-10 pb-5"
   >
-    <div class="pointer-events-auto w-full" class:invisible={animationStep < 4}>
-      <GridSection
-        active={animationStep === 4}
-        onComplete={() => finishAnimationStep(4)}
-      />
+    <div class="pointer-events-auto w-full">
+      <GridSection />
     </div>
   </section>
 </main>
